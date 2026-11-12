@@ -1,19 +1,17 @@
 # main.py
-# Menu principal e controle da execução do SmartPark.
-# É o único arquivo executável. Aqui ficam as variáveis de estado.
-
+# Aqui fica o menu principal do SmartPark e o que controla o programa.
+# É o único arquivo que roda, os outros só são chamados por ele.
 
 import movimentacao
 import relatorios as rel
 
-
 # ---------- ESTADO DO SISTEMA ----------
-# Só existem aqui. Os outros arquivos recebem por parâmetro e devolvem por return.
+# O que o programa precisa lembrar enquanto está aberto.
+# Os outros arquivos só recebem esses valores e devolvem atualizados.
 vagas_ocupadas = 0
 total_entradas = 0
 total_saidas = 0
 faturamento = 0.0
-
 
 # ---------- MENU ----------
 while True:
@@ -29,9 +27,7 @@ while True:
    print("0 - Encerrar sistema")
    print("=" * 40)
 
-
    opcao = input("Escolha uma opção: ")
-
 
    match opcao:
        case "1":
@@ -49,7 +45,7 @@ while True:
        case "6":
            rel.mostrar_tabela_precos()
        case "0":
-           # Resumo final antes de encerrar
+           # Mostra os totais antes de fechar o programa
            print("Encerrando o SmartPark. Resumo final:")
            print("Total de entradas:", total_entradas)
            print("Total de saídas:", total_saidas)
@@ -57,4 +53,4 @@ while True:
            print("Até logo!")
            break
        case _:
-           print("Opção inválida! Escolha um número do menu.")
+           print("Ops, essa opção não existe! Tenta um número do menu.")
