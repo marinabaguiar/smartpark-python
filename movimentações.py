@@ -2,7 +2,7 @@
 # Entrada e saída de veículos.
 # Sem contador global: tudo chega por parâmetro e volta por return.
 
-from config import TOTAL_VAGAS
+from config import CAPACIDADE_MAXIMA as TOTAL_VAGAS
 import financeiro as fin
 
 
@@ -42,14 +42,14 @@ def registrar_saida(ocupadas, saidas, faturamento):
                 horas_validas = True
 
 # Saída válida: calcula o valor (a tarifa e o mínimo estão no financeiro)
-valor = fin.calcular_cobranca(horas)
+    valor = fin.calcular_cobranca(horas)
 
-ocupadas = ocupadas - 1
-saidas = saidas + 1
-faturamento = faturamento + valor
+    ocupadas = ocupadas - 1
+    saidas = saidas + 1
+    faturamento = faturamento + valor
 
-print("---- COMPROVANTE DE SAÍDA ----")
-print(f"Permanência: {horas} hora(s)")
-print(f"Total a pagar: {fin.formatar_moeda(valor)}")
-print("-----------------------------------")
-return ocupadas, saidas, faturamento
+    print("---- COMPROVANTE DE SAÍDA ----")
+    print(f"Permanência: {horas} hora(s)")
+    print(f"Total a pagar: {fin.formatar_moeda(valor)}")
+    print("-----------------------------------")
+    return ocupadas, saidas, faturamento
