@@ -17,4 +17,4 @@ def formatar_moeda(valor):
     total_centavos = int(valor * 100 + 0.5)
     reais = total_centavos // 100
     centavos = total_centavos % 100
-    return f"R$ {reais}, {centavos:02d}"
+    return f"R$ {reais},{centavos:02d}"
