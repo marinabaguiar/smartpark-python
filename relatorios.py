@@ -22,7 +22,7 @@ def mostrar_faturamento(faturamento, saidas):
     if saidas > 0:
         media = faturamento / saidas
     else:
-        media = 0
+        media = 0.0
 
     print("Média por saída:", formatar_moeda(media))
 
@@ -33,9 +33,9 @@ def mostrar_relatorio(entradas, saidas, ocupadas, faturamento):
     print("\n--------------- RELATÓRIO GERAL ---------------")
     print("Total de entradas:", entradas)
     print("Total de saídas:", saidas)
-    print("Veículos estacionados:", ocupadas)
+    print("Carros no estacionamento:", ocupadas)
     print("Vagas disponíveis:", disponiveis)
-    print("Faturamento:", formatar_moeda(faturamento))
+    print("Total recebido:", formatar_moeda(faturamento))
 
 
 def mostrar_tabela_precos():
