@@ -1,3 +1,5 @@
+# SmartPark - Sistema de Estacionamento
+
 O SmartPark é um sistema de estacionamento desenvolvido em Python. Ele permite registrar a entrada e a saída de veículos, acompanhar a ocupação das vagas e consultar o faturamento do estacionamento.
 
 O programa possui um menu principal com as opções disponíveis. Por ele, o usuário consegue realizar os registros e consultar as informações do estacionamento.
